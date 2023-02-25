@@ -12,7 +12,7 @@ Docker-Compose (Recommended):
 version: "3"
 services:
   beer_tracker:
-    build: .
+    image: christracy/untappd_beer_tracker
     environment:
       UNTAPPD_USERNAME: "mikesmith"
       INTERVAL: "60"
