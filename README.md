@@ -1,5 +1,10 @@
 # Untappd_Beer_Tracker
 
+Docker pull:
+
+```sh
+docker pull christracy/untappd_beer_tracker
+```
 
 Docker-Compose (Recommended):
 
