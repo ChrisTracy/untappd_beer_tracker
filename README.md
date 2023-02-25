@@ -13,6 +13,7 @@ version: "3"
 services:
   beer_tracker:
     image: christracy/untappd_beer_tracker
+    restart: unless-stopped
     environment:
       UNTAPPD_USERNAME: "mikesmith"
       INTERVAL: "60"
