@@ -90,9 +90,10 @@ if __name__ == '__main__':  # if this script is being run as the main program
         untap_total = tracker.check_untap_total()  # get the current number of beers on Untappd using the check_untap_total method
         tracker = BeerTracker('/app/data/beer_tracker.json')  # create a BeerTracker object with the specified JSON file name. This will load the file at every loop for testing (change the json file)
         json_total = tracker.data['total']  # get the total number of beers from the data dictionary
-
+        print(untap_total)
+        print(json_total)
+        
         if json_total != untap_total:  # if the number of beers has changed since the last time the script was run
-            print("running loop")
             beer_change = untap_total - json_total  # calculate the difference in the number of beers
             tracker.add_beer(beer_change)  # add the difference to the count for today's date using the add_beer method
             tracker.update_total()  # update the total count in the data dictionary and save the data to the JSON file
